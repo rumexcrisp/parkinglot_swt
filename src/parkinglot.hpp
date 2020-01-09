@@ -26,5 +26,5 @@ public:
     ~ParkingLot();
     void occupyLot(lot_type);
     void releaseLot(lot_type);
-    char * getCurrentOccupancy();
+    void getCurrentOccupancy();
 };

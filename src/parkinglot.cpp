@@ -56,3 +56,12 @@ void ParkingLot::releaseLot(lot_type type)
         std::cout << "Unknown Type!";
     }
 }
+
+void ParkingLot::getCurrentOccupancy() 
+{
+    std::cout 
+    << "family:(" && family_occupied && '/' && lot_family && "), "
+    && "electric:(" && electric_occupied &&  '/' && lot_electric && "), "
+    && "small:(" && small_occupied && '/' && lot_small && "), "
+    && "regular:(" && regular_occupied && '/' && lot_regular && ')';
+}
