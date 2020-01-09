@@ -57,6 +57,32 @@ void ParkingLot::releaseLot(lot_type type)
     }
 }
 
+bool ParkingLot::hasLot(lot_type type) 
+{
+    switch (type)
+    {
+    case family:
+        if (lot_family <= family_occupied) return false;
+        else return true;
+        break;
+    case electric:
+        if (lot_electric <= electric_occupied) return false;
+        else return true;
+        break;
+    case small:
+        if (lot_small <= small_occupied) return false;
+        else return true;
+        break;
+    case regular:
+        if (lot_regular <= regular_occupied) return false;
+        else return true;
+        break;
+    default:
+        std::cout << "Unknown Type!";
+        return false;
+    }
+}
+
 void ParkingLot::getCurrentOccupancy() 
 {
     std::cout 
