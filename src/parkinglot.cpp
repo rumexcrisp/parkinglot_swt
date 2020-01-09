@@ -17,20 +17,42 @@ ParkingLot::~ParkingLot() {}
 
 void ParkingLot::occupyLot(lot_type type)
 {
-    switch(type){
-        case family:
-            family_occupied++;
-            break;
-        case electric:
-            electric_occupied++;
-            break;
-        case small:
-            small_occupied++;
-            break;
-        case regular:
-            regular_occupied++;
-            break;
-        default:
+    switch (type)
+    {
+    case family:
+        family_occupied++;
+        break;
+    case electric:
+        electric_occupied++;
+        break;
+    case small:
+        small_occupied++;
+        break;
+    case regular:
+        regular_occupied++;
+        break;
+    default:
+        std::cout << "Unknown Type!";
+    }
+}
+
+void ParkingLot::releaseLot(lot_type type)
+{
+    switch (type)
+    {
+    case family:
+        family_occupied--;
+        break;
+    case electric:
+        electric_occupied--;
+        break;
+    case small:
+        small_occupied--;
+        break;
+    case regular:
+        regular_occupied--;
+        break;
+    default:
         std::cout << "Unknown Type!";
     }
 }
